@@ -3,6 +3,7 @@ import { Head, Link, usePaginatedQuery, useRouter, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import getQuestions from "app/questions/queries/getQuestions"
 const ITEMS_PER_PAGE = 100
+
 export const QuestionsList = () => {
   const router = useRouter()
   const page = Number(router.query.page) || 0
@@ -38,7 +39,7 @@ export const QuestionsList = () => {
                 questionId: question.id,
               })}
             >
-              <a>{question.name}</a>
+              <a>{question.text}</a>
             </Link>
           </li>
         ))}

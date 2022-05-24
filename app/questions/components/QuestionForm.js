@@ -4,7 +4,7 @@ export { FORM_ERROR } from "app/core/components/Form"
 export function QuestionForm(props) {
   return (
     <Form {...props}>
-      <LabeledTextField name="name" label="Name" placeholder="Name" />
+      <LabeledTextField name="text" label="Text" placeholder="Text" />
     </Form>
   )
 }
